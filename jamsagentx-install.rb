@@ -1,10 +1,10 @@
-remote_file "#{Chef::Config[:file_cache_path]}/JAMSAgentX-6.0.2-1.x86_64.rpm" do
-	source "http://download.jamsscheduler.com/repo/redhat/x86_64/RPMS/JAMSAgentX-6.0.2-1.x86_64.rpm"
+remote_file "#{Chef::Config[:file_cache_path]}/JAMSAgentX-6.0.5-1.x86_64.rpm" do
+	source "http://download.jamsscheduler.com/repo/redhat6/x86_64/RPMS/JAMSAgentX-6.0.5-1.x86_64.rpm"
 	action :create
 end
 
 rpm_package "JAMSAgentX" do
-	source "#{Chef::Config[:file_cache_path]}/JAMSAgentX-6.0.2-1.x86_64.rpm"
+	source "#{Chef::Config[:file_cache_path]}/JAMSAgentX-6.0.5-1.x86_64.rpm"
     	action :install
 end
 
